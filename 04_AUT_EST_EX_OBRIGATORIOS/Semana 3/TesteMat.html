@@ -1,0 +1,32 @@
+<html>
+<head>
+	<meta charset="UTF-8" />	
+	<title>Lançamento Vertical</title>
+</head>
+<body background-color: #>
+<h1 span style="color:rgb(43, 7, 206)">Altura Máxima</span></h1>
+	<div>
+		<label>Velocidade Inicial:
+			<input type="text" name="valor1" id="velocidadeI" ><br>
+		</label>
+	</div>
+	<button onclick="calcularvelocidade()">Calcular</button>
+	<div>	<span id="meters"></span><br> <br>
+		<span id="time"></span></div>
+
+</body>
+	<script> 
+		var vi = document.querySelector("#velocidadeI")
+		var G = 10
+		var metros = document.querySelector("#meters")
+		var temp = document.querySelector("#time")
+
+		function calcularvelocidade() {
+			var tempo = parseInt(vi.value)/G;
+			var hmax = parseInt(vi.value ** 2)/ parseInt(2*G);
+			metros.innerHTML = String("Altura Máxima= ") + hmax;
+			temp.innerHTML = String("Tempo = ") + tempo;
+		}
+	</script>
+
+</html>
